@@ -207,7 +207,7 @@ export function JobApplicationForm({ jobSlug, jobTitle }: JobApplicationFormProp
             name="location"
             type="text"
             required
-            placeholder="Bengaluru, India (UTC+5:30)"
+            placeholder="Janakpur, Nepal (UTC+5:45)"
             className="h-11 rounded border border-[#E5E7EB] bg-white px-3.5 text-sm text-[#111827] placeholder:text-[#9CA3AF] transition-colors focus:border-[#F51F3D] focus:outline-none focus:ring-1 focus:ring-[#F51F3D]"
           />
         </div>

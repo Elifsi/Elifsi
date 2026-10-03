@@ -2,9 +2,11 @@ export const siteConfig = {
   companyName: "Elifsi Technologies Private Limited",
   legalName: "Elifsi Technologies Private Limited",
   shortName: "Elifsi",
+  headquarters: "Janakpur, Nepal",
+  country: "Nepal",
   brandHeadline: "Engineering Modern Software Products and Intelligent Platforms",
   brandDescription:
-    "Elifsi Technologies Private Limited is a software and technology company creating, owning, and operating modern digital products, intelligent systems, and scalable technology platforms.",
+    "Elifsi Technologies Private Limited is a software and technology company based in Janakpur, Nepal, creating, owning, and operating modern digital products, intelligent systems, and scalable technology platforms.",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.elifsi.com",
   contactEmail: "contact@elifsi.com",
   careersEmail: "careers@elifsi.com",

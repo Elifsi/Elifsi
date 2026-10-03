@@ -134,10 +134,10 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
               </h3>
               <div className="text-xs text-[#667085] space-y-1.5 leading-relaxed">
                 <p className="font-semibold text-[#111827]">{siteConfig.companyName}</p>
-                <p>Incorporated under the Companies Act</p>
-                <p>Headquarters: Bengaluru, Karnataka, India</p>
+                <p>Incorporated under the Office of the Company Registrar, Nepal</p>
+                <p>Headquarters: Janakpurdham (Janakpur), Madhesh Province, Nepal</p>
                 <div className="pt-2 text-[11px] text-[#9CA3AF]">
-                  Operating hours: Monday – Friday, 09:30 – 18:30 IST
+                  Operating hours: Sunday – Friday, 09:30 – 17:30 NPT (UTC+5:45)
                 </div>
               </div>
             </div>

@@ -178,7 +178,7 @@ export function ContactForm({ prefilledTopic }: { prefilledTopic?: InquiryTopic 
             name="phone"
             type="tel"
             autoComplete="tel"
-            placeholder="+91 (0) 98765 43210"
+            placeholder="+977 98000 00000"
             className="h-11 rounded border border-[#E5E7EB] bg-white px-3.5 text-sm text-[#111827] placeholder:text-[#9CA3AF] transition-colors focus:border-[#F51F3D] focus:outline-none focus:ring-1 focus:ring-[#F51F3D]"
           />
         </div>

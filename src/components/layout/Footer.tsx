@@ -122,6 +122,11 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/admin" className="hover:text-[#F51F3D] transition-colors text-xs font-semibold text-[#111827]">
+                  Console & Hiring Admin →
+                </Link>
+              </li>
+              <li>
                 <Link href="/contact?topic=security" className="hover:text-[#F51F3D] transition-colors">
                   Security & Disclosure
                 </Link>
@@ -142,7 +147,7 @@ export function Footer() {
         <div className="mt-14 pt-8 border-t border-[#E5E7EB] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#667085]">
           <p>© {currentYear} {siteConfig.companyName}. All rights reserved.</p>
           <p className="text-center sm:text-right">
-            Independent software development company · Corporate headquarters: India
+            Independent software development company · Corporate headquarters: Janakpur, Nepal
           </p>
         </div>
       </div>

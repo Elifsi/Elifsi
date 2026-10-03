@@ -12,7 +12,7 @@ export const jobOpenings: JobOpening[] = [
     slug: "senior-full-stack-engineer",
     title: "Senior Full-Stack Engineer",
     department: "Engineering",
-    location: "Bengaluru, India / Hybrid",
+    location: "Janakpur, Nepal / Hybrid",
     employmentType: "Full-time",
     status: "open",
     summary:
@@ -49,7 +49,7 @@ export const jobOpenings: JobOpening[] = [
     slug: "ai-systems-engineer",
     title: "AI Systems & Inference Engineer",
     department: "AI & Systems",
-    location: "Bengaluru, India / Hybrid",
+    location: "Janakpur, Nepal / Hybrid",
     employmentType: "Full-time",
     status: "open",
     summary:
@@ -86,7 +86,7 @@ export const jobOpenings: JobOpening[] = [
     slug: "lead-product-designer",
     title: "Lead Product Designer",
     department: "Product & Design",
-    location: "Bengaluru, India / Hybrid",
+    location: "Janakpur, Nepal / Hybrid",
     employmentType: "Full-time",
     status: "open",
     summary:
@@ -123,7 +123,7 @@ export const jobOpenings: JobOpening[] = [
     slug: "talent-pool-general-application",
     title: "General Engineering & Product Talent Pool",
     department: "Engineering",
-    location: "Remote / Hybrid",
+    location: "Janakpur, Nepal / Remote (Nepal & Global)",
     employmentType: "Full-time",
     status: "open",
     summary:

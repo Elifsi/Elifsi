@@ -4,7 +4,8 @@ import { Section, Eyebrow } from "@/components/ui/Section";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { CTASection } from "@/components/sections/CTASection";
 import { CareersList } from "@/components/careers/CareersList";
-import { jobOpenings, departments } from "@/lib/data/jobs";
+import { departments } from "@/lib/data/jobs";
+import { getJobs } from "@/lib/db";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
@@ -14,7 +15,11 @@ export const metadata: Metadata = buildMetadata({
   path: "/careers",
 });
 
-export default function CareersPage() {
+export const dynamic = "force-dynamic";
+
+export default async function CareersPage() {
+  const jobs = await getJobs();
+
   const benefits = [
     {
       title: "Direct Product Ownership",
@@ -74,7 +79,7 @@ export default function CareersPage() {
           </p>
         </div>
 
-        <CareersList jobs={jobOpenings} departments={departments} />
+        <CareersList jobs={jobs} departments={departments} />
       </Section>
 
       {/* 3. Engineering Culture & Benefits */}

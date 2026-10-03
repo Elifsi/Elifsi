@@ -93,9 +93,9 @@ export default function TermsPage() {
           <div>
             <h2 className="text-xl font-bold text-[#111827] mb-3">6. Governing Law & Jurisdiction</h2>
             <p>
-              These Terms of Service are governed by and construed in accordance with the laws of India. Any disputes
+              These Terms of Service are governed by and construed in accordance with the laws of Nepal. Any disputes
               arising out of or related to these terms shall be subject to the exclusive jurisdiction of the competent
-              courts located in Bengaluru, Karnataka, India.
+              courts located in Janakpurdham, Dhanusha District, Nepal.
             </p>
           </div>
 

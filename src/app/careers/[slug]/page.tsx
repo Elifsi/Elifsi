@@ -6,23 +6,27 @@ import { Section, Eyebrow } from "@/components/ui/Section";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { Badge } from "@/components/ui/Badge";
 import { JobApplicationForm } from "@/components/careers/JobApplicationForm";
-import { jobOpenings } from "@/lib/data/jobs";
+import { getJobs, getJobBySlug } from "@/lib/db";
 import { siteConfig } from "@/lib/site-config";
 import { buildMetadata } from "@/lib/seo";
+
+export const dynamic = "force-dynamic";
+export const dynamicParams = true;
 
 interface JobDetailPageProps {
   params: Promise<{ slug: string }>;
 }
 
 export async function generateStaticParams() {
-  return jobOpenings.map((job) => ({
+  const jobs = await getJobs();
+  return jobs.map((job) => ({
     slug: job.slug,
   }));
 }
 
 export async function generateMetadata({ params }: JobDetailPageProps): Promise<Metadata> {
   const { slug } = await params;
-  const job = jobOpenings.find((j) => j.slug === slug);
+  const job = await getJobBySlug(slug);
 
   if (!job) {
     return buildMetadata({
@@ -41,7 +45,7 @@ export async function generateMetadata({ params }: JobDetailPageProps): Promise<
 
 export default async function JobDetailPage({ params }: JobDetailPageProps) {
   const { slug } = await params;
-  const job = jobOpenings.find((j) => j.slug === slug);
+  const job = await getJobBySlug(slug);
 
   if (!job) {
     notFound();
@@ -69,8 +73,8 @@ export default async function JobDetailPage({ params }: JobDetailPageProps) {
       "@type": "Place",
       address: {
         "@type": "PostalAddress",
-        addressLocality: "Bengaluru",
-        addressCountry: "IN",
+        addressLocality: "Janakpur",
+        addressCountry: "NP",
       },
     },
   };

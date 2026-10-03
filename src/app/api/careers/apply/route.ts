@@ -9,6 +9,7 @@ import {
   buildJobApplicationConfirmationHtml,
 } from "@/lib/resend";
 import { checkRateLimit, getClientIp } from "@/lib/rate-limit";
+import { saveApplication } from "@/lib/db";
 
 const applicationSchema = z.object({
   fullName: z.string().trim().min(2, "Full name must be at least 2 characters").max(100),
@@ -120,6 +121,25 @@ export async function POST(request: Request) {
 
   const refId = generateReferenceId("APP");
   const receivedAt = new Date().toISOString();
+
+  // 1. Persist application record in Supabase database & system store
+  await saveApplication({
+    referenceId: refId,
+    jobSlug: data.jobSlug,
+    jobTitle: data.jobTitle,
+    fullName: data.fullName,
+    email: data.email,
+    phone: data.phone,
+    location: data.location,
+    portfolioUrl: data.portfolioUrl || undefined,
+    githubUrl: data.githubUrl || undefined,
+    linkedinUrl: data.linkedinUrl || undefined,
+    coverLetter: data.coverLetter || undefined,
+    additionalMessage: data.additionalMessage || undefined,
+    resumeFileName,
+    resumeData: resumeAttachment ? resumeAttachment.content.toString("base64") : undefined,
+    resendStatus: "pending",
+  });
 
   console.log(`[careers-application] Received reference: ${refId}`, {
     candidate: data.fullName,

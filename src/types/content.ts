@@ -4,7 +4,7 @@ export type Department =
   | "Product & Design"
   | "Operations & Strategy";
 
-export type JobStatus = "open" | "upcoming" | "filled";
+export type JobStatus = "open" | "upcoming" | "filled" | "archived";
 
 export interface JobOpening {
   slug: string;

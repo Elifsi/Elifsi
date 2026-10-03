@@ -9,6 +9,7 @@ import {
   buildContactConfirmationHtml,
 } from "@/lib/resend";
 import { checkRateLimit, getClientIp } from "@/lib/rate-limit";
+import { saveInquiry } from "@/lib/db";
 
 const contactSchema = z.object({
   name: z.string().trim().min(2, "Name must be at least 2 characters").max(100),
@@ -65,6 +66,18 @@ export async function POST(request: Request) {
 
   const refId = generateReferenceId("CNT");
   const receivedAt = new Date().toISOString();
+
+  // 1. Persist lead record into Supabase database & system store
+  await saveInquiry({
+    referenceId: refId,
+    name: data.name,
+    email: data.email,
+    phone: data.phone || undefined,
+    organization: data.organization || undefined,
+    topic: data.topic,
+    message: data.message,
+    resendStatus: "pending",
+  });
 
   console.log(`[contact-lead] Received reference: ${refId}`, {
     name: data.name,
