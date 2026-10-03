@@ -1,0 +1,150 @@
+import { JobOpening } from "@/types/content";
+
+export const departments = [
+  "Engineering",
+  "AI & Systems",
+  "Product & Design",
+  "Operations & Strategy",
+] as const;
+
+export const jobOpenings: JobOpening[] = [
+  {
+    slug: "senior-full-stack-engineer",
+    title: "Senior Full-Stack Engineer",
+    department: "Engineering",
+    location: "Bengaluru, India / Hybrid",
+    employmentType: "Full-time",
+    status: "open",
+    summary:
+      "Architect and scale distributed multi-service backends and high-performance client applications that power Elifsi's consumer and enterprise software ecosystems.",
+    responsibilities: [
+      "Design, implement, and maintain low-latency APIs and resilient backend services using TypeScript, Go/Node.js, and modern cloud infrastructure.",
+      "Develop responsive, fluid web and mobile interfaces with a focus on performance, accessibility, and micro-interactions.",
+      "Architect reliable data pipelines and caching layers to support cross-service transactions across the Evrry super app platform.",
+      "Drive high engineering standards through rigorous code reviews, automated integration testing, and observability tooling.",
+      "Collaborate with AI and product teams to integrate intelligent agentic services into high-traffic production paths.",
+    ],
+    requirements: [
+      "4+ years of professional software engineering experience building production web applications or distributed systems.",
+      "Deep expertise in TypeScript, React / Next.js, and relational or document databases (PostgreSQL, Redis).",
+      "Demonstrated experience designing idempotent REST / GraphQL / gRPC APIs and handling asynchronous task workflows.",
+      "Solid understanding of web security, rate-limiting, authentication protocols, and web performance profiling.",
+      "Strong bias for clean system architecture, modular codebases, and comprehensive test coverage.",
+    ],
+    niceToHave: [
+      "Experience with real-time systems (WebSockets, SSE) or event-driven architectures (Kafka, RabbitMQ).",
+      "Familiarity with container orchestration (Docker, Kubernetes) and CI/CD pipelines.",
+      "Active open-source contributions or technical writing.",
+    ],
+    benefits: [
+      "Competitive salary and equity packages.",
+      "Comprehensive health coverage for you and your dependents.",
+      "Flexible hybrid working model and modern hardware allowance.",
+      "Annual continuous learning, book, and conference stipend.",
+      "Work directly with founding engineers on flagship software products.",
+    ],
+    publishedAt: "2026-09-15",
+  },
+  {
+    slug: "ai-systems-engineer",
+    title: "AI Systems & Inference Engineer",
+    department: "AI & Systems",
+    location: "Bengaluru, India / Hybrid",
+    employmentType: "Full-time",
+    status: "open",
+    summary:
+      "Build the intelligent orchestration engines, agentic reasoning loops, and multi-modal pipeline infrastructure that power Eli—Evrry's AI concierge—and future Elifsi technologies.",
+    responsibilities: [
+      "Architect and optimize multi-turn agentic workflows, tool-calling pipelines, and context routing systems for Eli.",
+      "Develop low-latency model inference pipelines, hybrid search (dense embeddings + sparse keyword), and intent-classification classifiers.",
+      "Establish automated benchmarking, evaluation suites, and red-teaming pipelines for AI agent safety and precision.",
+      "Bridge frontier language models with operational transactional systems (food menus, booking engines, transit dispatch).",
+      "Collaborate with product designers to create conversational-plus-spatial user experiences that feel instantaneous and reliable.",
+    ],
+    requirements: [
+      "3+ years of experience engineering production software with at least 1.5+ years focused on applied machine learning, LLM systems, or NLP.",
+      "Strong proficiency in Python or TypeScript, vector databases (Qdrant, pgvector, Pinecone), and modern inference runtimes.",
+      "Practical experience building structured output extractors, tool execution sandboxes, and stateful agent graphs.",
+      "Deep understanding of latency bottlenecks, token budget optimization, semantic caching, and streaming protocols.",
+      "Proven ability to evaluate model performance with quantitative metrics rather than intuition.",
+    ],
+    niceToHave: [
+      "Experience deploying local/open weights models (e.g. vLLM, TensorRT-LLM, Ollama).",
+      "Publications or open-source libraries in the agentic AI or retrieval space.",
+      "Background in multi-agent orchestration or cross-domain planning.",
+    ],
+    benefits: [
+      "Competitive compensation and significant equity grants.",
+      "Top-tier compute resources and API access budgets for research and rapid experimentation.",
+      "Comprehensive medical coverage.",
+      "Flexible working arrangements and ergonomic home office setup.",
+      "High impact ownership of core proprietary intelligence infrastructure.",
+    ],
+    publishedAt: "2026-09-20",
+  },
+  {
+    slug: "lead-product-designer",
+    title: "Lead Product Designer",
+    department: "Product & Design",
+    location: "Bengaluru, India / Hybrid",
+    employmentType: "Full-time",
+    status: "open",
+    summary:
+      "Define the visual identity, interaction paradigms, and spatial UI systems for Elifsi's software products, unifying complex multi-service workflows into intuitive consumer experiences.",
+    responsibilities: [
+      "Lead end-to-end design across mobile and web surfaces for Evrry and Elifsi's foundational design system.",
+      "Design innovative multimodal interaction patterns combining conversational AI (Eli) with rich, dynamic visual widgets.",
+      "Maintain and evolve a comprehensive, tokenized design system in Figma and closely partner with frontend engineers for pixel-accurate execution.",
+      "Map intricate user journeys spanning multi-vertical services (e.g., booking a trip that coordinates hotel, ride, and dining).",
+      "Champion user empathy through usability testing, qualitative research, and product analytics.",
+    ],
+    requirements: [
+      "5+ years of experience designing high-craft consumer or enterprise digital products.",
+      "A remarkable portfolio demonstrating systems thinking, typography, motion design, and responsive layout craftsmanship.",
+      "Strong understanding of modern frontend development constraints (HTML/CSS, layout systems, component lifecycles).",
+      "Experience designing for complex state transitions, micro-interactions, and empty/error states.",
+      "Exceptional communication skills and ability to articulate design rationale clearly.",
+    ],
+    niceToHave: [
+      "Experience creating 3D product visual assets (Spline, Blender, Cinema4D).",
+      "Prototyping experience with code (React, Framer Motion, or Swift).",
+      "Previous experience at a high-growth product company or renowned digital studio.",
+    ],
+    benefits: [
+      "Competitive salary and equity grant.",
+      "Comprehensive health and wellness benefits.",
+      "Premium workstation and display budget.",
+      "Conference and creative inspiration stipend.",
+      "Collaborative, high-craft engineering and product culture.",
+    ],
+    publishedAt: "2026-09-28",
+  },
+  {
+    slug: "talent-pool-general-application",
+    title: "General Engineering & Product Talent Pool",
+    department: "Engineering",
+    location: "Remote / Hybrid",
+    employmentType: "Full-time",
+    status: "open",
+    summary:
+      "Don't see an exact match for your background? Submit your profile to Elifsi Technologies. We continuously review high-caliber builders across distributed systems, mobile development, platform security, and data infrastructure.",
+    responsibilities: [
+      "We recruit exceptional builders who thrive on autonomy, technical precision, and product craftsmanship.",
+      "Areas of interest include: Distributed Backend Systems, iOS / Android Native Development, Data Engineering, Infrastructure & Site Reliability, Product Management, and Technical Operations.",
+    ],
+    requirements: [
+      "Demonstrated history of building high-quality software, platforms, or digital systems.",
+      "Curiosity, strong engineering fundamentals, and a passion for end-to-end product ownership.",
+      "Ability to thrive in an early-stage, high-velocity technology company.",
+    ],
+    niceToHave: [
+      "A portfolio of software projects, open source contributions, or technical publications.",
+    ],
+    benefits: [
+      "Competitive compensation package tailored to experience and impact.",
+      "Full benefits package and flexible working structure.",
+      "Opportunity to shape foundational software products from ground up.",
+    ],
+    publishedAt: "2026-10-01",
+  },
+];

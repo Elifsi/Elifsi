@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+/*
+  Elifsi Technologies Private Limited — Corporate Design Tokens
+  Exact brand palette specified by the master specification.
+*/
+:root {
+  --primary: #F51F3D;
+  --primary-dark: #D91432;
+  --text-main: #111827;
+  --text-muted: #667085;
+  --background: #FFFFFF;
+  --surface: #F7F8FA;
+  --brand-tint: #FFF1F3;
+  --border: #E5E7EB;
+  --border-strong: #D1D5DB;
+
+  --shadow-subtle: 0 1px 3px rgba(17, 24, 39, 0.05), 0 1px 2px rgba(17, 24, 39, 0.03);
+  --shadow-card: 0 4px 12px -2px rgba(17, 24, 39, 0.05), 0 2px 6px -1px rgba(17, 24, 39, 0.03);
+  --shadow-elevated: 0 16px 36px -8px rgba(17, 24, 39, 0.08), 0 4px 12px -2px rgba(17, 24, 39, 0.04);
+}
+
+@theme inline {
+  --color-primary: var(--primary);
+  --color-primary-dark: var(--primary-dark);
+  --color-text-main: var(--text-main);
+  --color-text-muted: var(--text-muted);
+  --color-bg-white: var(--background);
+  --color-surface: var(--surface);
+  --color-brand-tint: var(--brand-tint);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+}
+
+* {
+  border-color: var(--border);
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--background);
+  color: var(--text-main);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--background);
+  color: var(--text-main);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Focus outline */
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* Subtle architectural grid textures */
+.bg-grid-subtle {
+  background-image:
+    linear-gradient(to right, rgba(17, 24, 39, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(17, 24, 39, 0.03) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.bg-dot-subtle {
+  background-image: radial-gradient(rgba(17, 24, 39, 0.07) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Glass & elevated surface tokens */
+.surface-card {
+  background-color: #FFFFFF;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-card);
+}
+
+.surface-card:hover {
+  border-color: var(--border-strong);
+}
+
+/* Text balance */
+.text-balance {
+  text-wrap: balance;
+}
