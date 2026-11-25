@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Logo } from "@/components/ui/Logo";
+import { SocialLinks } from "@/components/ui/SocialLinks";
 import { siteConfig } from "@/lib/site-config";
 
 export function Footer() {
@@ -27,6 +28,9 @@ export function Footer() {
             <div className="pt-2 flex items-center gap-3 text-xs text-[#667085]">
               <span className="inline-block w-2 h-2 rounded-full bg-emerald-500" />
               <span>Platform Systems Nominal · Direct Inquiries Active</span>
+            </div>
+            <div className="pt-2">
+              <SocialLinks />
             </div>
           </div>
 

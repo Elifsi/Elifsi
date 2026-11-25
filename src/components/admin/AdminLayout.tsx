@@ -75,19 +75,18 @@ export function AdminLayout({
       {/* 1. Modern SaaS Dark Sidebar */}
       <aside className="w-full md:w-64 bg-[#111827] text-white flex flex-col shrink-0 border-r border-[#1F2937]">
         {/* Brand header */}
-        <div className="p-6 border-b border-[#1F2937] flex items-center justify-between">
-          <Link href="/admin" className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded-md bg-[#F51F3D] flex items-center justify-center font-bold text-white text-base">
-              E
-            </div>
-            <div>
-              <span className="font-bold tracking-tight text-white block text-sm">ELIFSI</span>
-              <span className="text-[10px] font-mono text-[#F51F3D] tracking-widest block uppercase font-semibold">
-                SaaS Console
-              </span>
-            </div>
-          </Link>
-          <span className="text-[9px] font-mono px-1.5 py-0.5 rounded bg-[#1F2937] text-gray-300">
+        <div className="p-6 border-b border-[#1F2937] flex items-center justify-between gap-2">
+          <div className="flex flex-col gap-1.5">
+            <Logo
+              href="/admin"
+              size="sm"
+              className="bg-white rounded-md px-2.5 py-1.5"
+            />
+            <span className="text-[10px] font-mono text-[#F51F3D] tracking-widest block uppercase font-semibold">
+              SaaS Console
+            </span>
+          </div>
+          <span className="text-[9px] font-mono px-1.5 py-0.5 rounded bg-[#1F2937] text-gray-300 self-start">
             v2.4
           </span>
         </div>

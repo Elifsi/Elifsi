@@ -3,6 +3,7 @@ import { Container } from "@/components/ui/Container";
 import { Section, Eyebrow } from "@/components/ui/Section";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { ContactForm } from "@/components/sections/ContactForm";
+import { SocialLinks } from "@/components/ui/SocialLinks";
 import { siteConfig } from "@/lib/site-config";
 import { buildMetadata } from "@/lib/seo";
 import { InquiryTopic } from "@/types/content";
@@ -140,6 +141,14 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
                   Operating hours: Sunday – Friday, 09:30 – 17:30 NPT (UTC+5:45)
                 </div>
               </div>
+            </div>
+
+            {/* Official Social Channels */}
+            <div className="rounded-xl border border-[#E5E7EB] bg-white p-6 shadow-xs">
+              <h3 className="font-bold text-sm text-[#111827] uppercase tracking-wider mb-3">
+                Official Social Channels
+              </h3>
+              <SocialLinks showLabels />
             </div>
 
             {/* Response Time Guarantee */}

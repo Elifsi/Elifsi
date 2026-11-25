@@ -10,6 +10,33 @@ export const siteConfig = {
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.elifsi.com",
   contactEmail: "contact@elifsi.com",
   careersEmail: "careers@elifsi.com",
+  socials: [
+    {
+      id: "linkedin",
+      label: "LinkedIn",
+      href: "https://www.linkedin.com/company/elifsi",
+    },
+    {
+      id: "x",
+      label: "X (Twitter)",
+      href: "https://x.com/elifsi_tech",
+    },
+    {
+      id: "instagram",
+      label: "Instagram",
+      href: "https://www.instagram.com/elifsitechnologies/",
+    },
+    {
+      id: "facebook",
+      label: "Facebook",
+      href: "https://www.facebook.com/profile.php?id=61594541404980",
+    },
+    {
+      id: "tiktok",
+      label: "TikTok",
+      href: "https://www.tiktok.com/elifsi",
+    },
+  ] as const,
   colors: {
     primary: "#F51F3D",
     primaryDark: "#D91432",

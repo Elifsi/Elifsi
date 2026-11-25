@@ -38,6 +38,7 @@ export function buildMetadata({
     },
     twitter: {
       card: "summary_large_image",
+      site: "@elifsi_tech",
       title: pageTitle,
       description,
     },
@@ -65,9 +66,10 @@ export function buildOrganizationSchema() {
     legalName: siteConfig.legalName,
     alternateName: siteConfig.shortName,
     url: siteConfig.url,
+    logo: `${siteConfig.url}/images/elifsi-logo.png`,
     description: siteConfig.brandDescription,
     email: siteConfig.contactEmail,
-    sameAs: [],
+    sameAs: siteConfig.socials.map((s) => s.href),
     knowsAbout: [
       "Software Development",
       "Artificial Intelligence",
